@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating image.</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .rotate{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: coral;
+        }
+        @keyframes spiral {
+            0%{
+                width:100px;
+                height:100px;
+                transform: rotate(0deg);
+            }
+            20%{
+                width: 200px;
+                height: 200px;
+                /* transform: rotate(90deg); */
+            }
+            40%{
+                width:300px;
+                height:300px;
+                /* transform: rotate(180deg); */
+            }
+            80%{
+                width:400px;
+                height:400px;
+                /* transform: rotate(270deg); */
+            }
+            100%{
+                width:500px;
+                height:500px;
+                transform: rotate(3600deg);
+            }
+        }
+        img{
+            height: 100px;
+            width: 100px;
+            transform: rotate(0deg);
+            animation: spiral 3s ease-in-out 0s infinite alternate-reverse ;
+        }
+    </style>
+</head>
+<body>
+    <div class="rotate"><img src="spiral.1.png" alt=""></div>
+</body>
+</html>
